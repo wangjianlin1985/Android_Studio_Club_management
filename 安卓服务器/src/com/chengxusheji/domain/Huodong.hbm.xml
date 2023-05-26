@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Huodong" table="Huodong">
+
+          <!-- 主键活动id -->
+          <id name="huodongId" column="huodongId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单字符串属性: 活动名称 -->
+          <property
+            name="huodongName"
+            column="huodongName"
+            type="string"
+            length="80"
+          />
+
+          <!-- 简单字符串属性: 活动内容 -->
+          <property
+            name="huodongDesc"
+            column="huodongDesc"
+            type="string"
+            length="5000"
+          />
+
+          <!-- 简单日期型属性: 活动时间 -->
+          <property
+            name="huodongTime"
+            column="huodongTime"
+            	type="timestamp"
+            	length="10"
+          />
+
+          <!-- 多对一属性: 活动社团 -->
+          <many-to-one name="shetuanObj"
+            column="shetuanObj"
+            class="Shetuan"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 活动备注 -->
+          <property
+            name="huodongMemo"
+            column="huodongMemo"
+            type="string"
+            length="500"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <constant name="struts.i18n.encoding" value="gbk"/>
+     <constant name="struts.devMode" value="true" />
+     <!--Struts2中Action对象的创建交给spring完成-->
+     <constant name="struts.objectFactory" value="spring" />   
+       
+          
+	 <package name="login" namespace="/login" extends="struts-default">
+	        <action name="login_*" class="loginAction" method="{1}">
+	        	<result name="main_view">/main.jsp</result>
+	        	<result name="error">/error.jsp</result>
+	        	<result name="input">/login.jsp</result> 
+	        	<result name="login_view">/login.jsp</result>
+	          
+	        </action>  
+	 </package>
+	 
+         <!-- UserInfoAction配置 -->
+         <package name="UserInfo" namespace="/UserInfo" extends="struts-default">
+           <action name="UserInfo_*" class="userInfoAction" method="{1}">
+             <result name="add_view">/UserInfo_add.jsp</result>
+             <result name="input">/UserInfo_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/UserInfo_query_result.jsp</result>
+             <result name="front_query_view">/UserInfo_frontquery_result.jsp</result>
+             <result name="front_show_view">/UserInfo_frontshow.jsp</result>
+             <result name="modify_view">/UserInfo_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- ClassInfoAction配置 -->
+         <package name="ClassInfo" namespace="/ClassInfo" extends="struts-default">
+           <action name="ClassInfo_*" class="classInfoAction" method="{1}">
+             <result name="add_view">/ClassInfo_add.jsp</result>
+             <result name="input">/ClassInfo_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/ClassInfo_query_result.jsp</result>
+             <result name="front_query_view">/ClassInfo_frontquery_result.jsp</result>
+             <result name="front_show_view">/ClassInfo_frontshow.jsp</result>
+             <result name="modify_view">/ClassInfo_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- ShetuanAction配置 -->
+         <package name="Shetuan" namespace="/Shetuan" extends="struts-default">
+           <action name="Shetuan_*" class="shetuanAction" method="{1}">
+             <result name="add_view">/Shetuan_add.jsp</result>
+             <result name="input">/Shetuan_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/Shetuan_query_result.jsp</result>
+             <result name="front_query_view">/Shetuan_frontquery_result.jsp</result>
+             <result name="front_show_view">/Shetuan_frontshow.jsp</result>
+             <result name="modify_view">/Shetuan_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- HuodongAction配置 -->
+         <package name="Huodong" namespace="/Huodong" extends="struts-default">
+           <action name="Huodong_*" class="huodongAction" method="{1}">
+             <result name="add_view">/Huodong_add.jsp</result>
+             <result name="input">/Huodong_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/Huodong_query_result.jsp</result>
+             <result name="front_query_view">/Huodong_frontquery_result.jsp</result>
+             <result name="front_show_view">/Huodong_frontshow.jsp</result>
+             <result name="modify_view">/Huodong_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- ShenqingAction配置 -->
+         <package name="Shenqing" namespace="/Shenqing" extends="struts-default">
+           <action name="Shenqing_*" class="shenqingAction" method="{1}">
+             <result name="add_view">/Shenqing_add.jsp</result>
+             <result name="input">/Shenqing_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/Shenqing_query_result.jsp</result>
+             <result name="front_query_view">/Shenqing_frontquery_result.jsp</result>
+             <result name="front_show_view">/Shenqing_frontshow.jsp</result>
+             <result name="modify_view">/Shenqing_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- NoticeAction配置 -->
+         <package name="Notice" namespace="/Notice" extends="struts-default">
+           <action name="Notice_*" class="noticeAction" method="{1}">
+             <result name="add_view">/Notice_add.jsp</result>
+             <result name="input">/Notice_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/Notice_query_result.jsp</result>
+             <result name="front_query_view">/Notice_frontquery_result.jsp</result>
+             <result name="front_show_view">/Notice_frontshow.jsp</result>
+             <result name="modify_view">/Notice_modify.jsp</result>
+           </action>
+         </package>
+
+
+	 
+	 
+
+ 	 <package name="password" namespace="/password" extends="struts-default">
+	        <action name="ChangePassword" class="changePasswordAction">  
+	        	<result name="change_success">/message.jsp</result>
+	        	<result name="error">/error.jsp</result> 
+	        </action>  
+	 </package> 
+	  
+	 <package name="User" namespace="/User" extends="struts-default">
+	        <action name="User_*" class="com.chengxusheji.action.UserAction" method="{1}">  
+	        	<result name="user_query_view">/user_query_result.jsp</result>
+	        	<result name="success">/message.jsp</result>
+	        	<result name="error">/error.jsp</result> 
+	        </action>  
+	 </package>  
+	 
+</struts>
